@@ -23,11 +23,12 @@ fetch('https://jsonplaceholder.typicode.com/todos')
       }
       // open new blank page ,
       todoDiv.addEventListener('click', () => {
-        window.open(``, 'newpage',"width=500,height=500");
+        window.open(`https://jsonplaceholder.typicode.com/todos/${todo.id},${todo.title},${todo.userId},${todo.completed}`, 'newpage',"width=500,height=500");
+        alert("welcome to my new page")
       });
       todoOrigin.appendChild(todoDiv);
     });
-  })
+  }) 
   .catch(error => {
     console.log( error);
   });
